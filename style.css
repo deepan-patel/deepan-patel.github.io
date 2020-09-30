@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
 
 html {
   scroll-behavior: smooth;
@@ -9,7 +10,6 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: var(--primary-color);
 }
 
 body {
@@ -18,322 +18,82 @@ body {
   --secondary-color: #fca311;
   font-family: "Poppin", "Roboto", sans-serif;
   color: var(--offwhite-color);
-}
-/* nav bar */
-li,
-a,
-button {
-  font-family: "Poppin", "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 25px;
-  color: var(--offwhite-color);
-  text-decoration: none;
+  /* background-color: var(--primary-color); */
 }
 
-.navbar header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0px 10%;
-  position: fixed;
-  min-width: 100%;
+.navbar {
   min-height: 10vh;
-  z-index: 1;
+  font-size: 25px;
 }
 
-#logo {
-  font-family: "Poppin", "Montserrat", sans-serif;
-  font-weight: 500;
+.navbar-brand {
   font-size: 30px;
+}
+.navbar-custom {
+  background-color: var(--primary-color);
+}
+/* Modify brand and text color */
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text,
+.nav-item .nav-link {
   color: var(--offwhite-color);
-  cursor: pointer;
-  margin-right: auto;
 }
 
-#logo a:hover {
+.nav-item .nav-link:hover {
   color: var(--secondary-color);
 }
 
-.nav-items {
-  list-style: none;
-}
-
-.nav-items li {
-  display: inline-block;
-  padding: 0px 20px;
-}
-
-.nav-items li a {
-  transition: all 0.3s ease 0s;
-}
-
-.nav-items li a:hover {
+.navbar-brand:hover {
   color: var(--secondary-color);
 }
 
-.navbar button {
-  padding: 9px 25px;
-  background-color: rgba(252, 163, 17, 1);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(252, 163, 17, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-.navbar button:hover {
-  background-color: rgba(252, 163, 17, 0.8);
+/* why doesnt this work */
+/* link: https://stackoverflow.com/questions/42586729/bootstrap-4-change-hamburger-toggler-color */
+.navbar-custom .custom-toggler .navbar-toggler {
+  border-color: rgb(252, 163, 17);
 }
 
-/* landing page column stacks row stack beside  */
-#landing-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding-left: 10%;
-  padding-right: 10%;
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+  padding: 1rem;
 }
 
-.personal-image {
-  border-radius: 50%;
-  min-width: 50vh;
-  min-height: 50vh;
-  background-image: url("images/profile_pic.jpeg");
-  background-size: cover;
-  background-position: center;
-  margin-left: 100px;
-}
+/* home page */
+/* .personal-image { */
+/* border-radius: 50%; */
+/* width: 50vmin; */
+/* height: 50vmin; */
+/* background-image: url("images/profile_pic.jpeg"); */
+/* background-size: cover; */
+/* background-position: center; */
+/* margin: auto; */
+/* } */
 
-.information {
-  display: flex;
-  flex-direction: column;
-}
-
-#landing-page h1 {
+#home-page h1 {
   font-style: normal;
   font-weight: normal;
   font-size: 72px;
   line-height: 84px;
 }
 
-#landing-page p {
+#home-page p {
   font-size: 15px;
 }
-.about-me {
-  width: 269px;
-  height: 77px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  cursor: pointer;
-  margin-top: 10px;
-
-  display: inline-block;
-  color: var(--offwhite-color);
-  background-color: var(--primary-color);
-  border: 4px solid var(--secondary-color);
+.information {
+  margin: auto;
+  padding-left: 0 50px;
+}
+.profile-img {
+  margin: auto;
 }
 
-.about-me:hover {
-  color: var(--offwhite-color);
-  background-color: var(--secondary-color);
-}
-
-/*Experience page */
-.sub-title {
-  padding-top: 10vh;
-  font-size: 25px;
-  color: var(--secondary-color);
-}
-
-#Experience {
-  display: flex;
-  flex-direction: column;
-  padding-left: 10%;
-  padding-right: 10%;
-  min-height: 100vh;
-}
-
-#Experience p {
-  padding-top: 10px;
-  font-size: 25px;
-  padding-left: 50px;
-}
-
-#Experience a {
-  text-decoration: none;
-  font-size: 35px;
-}
-#Experience a:hover {
-  color: rgba(252, 163, 17, 0.8);
-}
-
-.exp-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.exp-container img {
-  width: 200px;
-  height: 200px;
-}
-
-.align-text {
-  position: relative;
-}
-.company-name {
-  font-size: 35px;
-}
-.time-location {
-  padding-left: 10px;
-  font-size: 25px;
-}
-.exp-block {
-  min-height: 40vh;
-  display: flex;
-  flex-direction: column;
-  padding-top: auto;
-}
-
-/*Projects Page*/
-#Projects {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.project-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 10px;
-  min-height: 80vh;
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--offwhite-color);
-  min-width: 400px;
-  max-width: 450px;
-  height: 70vh;
-  border-radius: 10%;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 5px solid var(--secondary-color);
-}
-
-.project-card #project-name {
-  background-color: var(--offwhite-color);
-  color: var(--primary-color);
-}
-
-.project-card #project-info {
-  padding-top: 10px;
-  background-color: var(--offwhite-color);
-  color: var(--primary-color);
-  font-size: 20px;
-}
-
-.project-card #project-img {
-  border-radius: 50%;
-  background-color: white;
-  width: 300px;
-  height: 300px;
-  margin: 10px;
-  border: 5px solid var(--secondary-color);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.mission-egypt {
-  background-image: url("images/mission_logo.png");
-}
-
-.physics-world {
-  background-image: url("images/physics_logo.png");
-}
-
-.crossy-road {
-  background-image: url("images/crossy-road.png");
-}
-
-.crossy-road:hover {
-  cursor: pointer;
-  background-image: url("files/crossyroad\(small\).gif");
-}
-
-.max-width-card {
-  max-width: 400px;
-  height: auto;
-  float: right;
-}
-
-/*About me page*/
-
-#About-me {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-/* flip code*/
-.photo-collage {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.middle {
-  display: flex;
-  position: relative;
-}
-.card {
-  cursor: pointer;
-  width: 500px;
-  height: 400px;
-  margin: 10px 0px;
-}
-
-.front,
-.back {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  backface-visibility: hidden;
-  position: absolute;
-  transition: transform 0.6s linear;
-}
-.front img {
-  height: 100%;
-  object-fit: cover;
-}
-
-.front {
-  transform: perspective(600px) rotateY(0deg);
-  backface-visibility: hidden;
-}
-.back {
-  background: var(--offwhite-color);
-  transform: perspective(600px) rotateY(180deg);
-}
-.back-content {
-  color: #2c3e50;
-  text-align: center;
-  width: 100%;
-}
-
-.card:hover > .front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-.card:hover > .back {
-  transform: perspective(600px) rotateY(0deg);
+#home-page .row {
+  min-height: 90vh;
 }
 
 .contacts-div {
@@ -342,7 +102,6 @@ button {
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  width: 500px;
   margin: 0px auto;
 }
 .contacts-div a {
@@ -356,3 +115,45 @@ button {
 .contacts-div a:hover {
   color: var(--offwhite-color);
 }
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+  .personal-image {
+    /* width: 500px; */
+    /* height: 500px; */
+  }
+  .information {
+    text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  /* .personal-image { */
+  /* width: 400px; */
+  /* height: 400px; */
+  /* } */
+}
+@media (max-width: 576px) {
+  /* .personal-image { */
+  /* width: 400px; */
+  /* height: 400px; */
+  /* } */
+  .information {
+    text-align: center;
+  }
+}
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/ ;
