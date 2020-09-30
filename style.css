@@ -123,7 +123,7 @@ body {
   min-height: 90vh;
 }
 
-#About-me hr {
+hr {
   background-color: var(--secondary-color);
 }
 /* card flip code 1 */
@@ -227,6 +227,9 @@ margin: auto;
   /* width: 400px; */
   /* height: 400px; */
   /* } */
+  .company-logo {
+    visibility: hidden;
+  }
 }
 @media (max-width: 576px) {
   /* .personal-image { */
@@ -239,10 +242,54 @@ margin: auto;
   .card-container {
     margin: auto;
   }
+  #home-page h1 {
+    font-size: 50px;
+  }
 }
 /* experience */
 #Experience {
   min-height: 90vh;
+}
+
+#Experience p {
+  padding-top: 10px;
+  font-size: 25px;
+  padding-left: 50px;
+}
+
+#Experience a {
+  text-decoration: none;
+  font-size: 35px;
+}
+#Experience a:hover {
+  color: rgba(252, 163, 17, 0.8);
+}
+
+.exp-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.align-text {
+  position: relative;
+}
+.company-name {
+  font-size: 35px;
+}
+.time-location {
+  padding-left: 10px;
+  font-size: 25px;
+}
+.exp-block {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: auto;
+}
+.company-logo {
+  width: 200px;
+  height: 200px;
 }
 /* projects */
 #Projects {
