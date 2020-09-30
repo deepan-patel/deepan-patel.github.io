@@ -18,7 +18,11 @@ body {
   --secondary-color: #fca311;
   font-family: "Poppin", "Roboto", sans-serif;
   color: var(--offwhite-color);
-  /* background-color: var(--primary-color); */
+  background-color: var(--primary-color);
+}
+
+.center {
+  margin: auto;
 }
 
 .navbar {
@@ -64,15 +68,6 @@ body {
 }
 
 /* home page */
-/* .personal-image { */
-/* border-radius: 50%; */
-/* width: 50vmin; */
-/* height: 50vmin; */
-/* background-image: url("images/profile_pic.jpeg"); */
-/* background-size: cover; */
-/* background-position: center; */
-/* margin: auto; */
-/* } */
 
 #home-page h1 {
   font-style: normal;
@@ -116,6 +111,53 @@ body {
   color: var(--offwhite-color);
 }
 
+/* About me section */
+.sub-title {
+  padding-top: 10vh;
+  font-size: 25px;
+  color: var(--secondary-color);
+}
+
+#About-me {
+  min-height: 90vh;
+}
+
+#About-me hr {
+  background-color: var(--secondary-color);
+}
+/* card flip code  */
+.card-container {
+  position: relative;
+  width: 18rem;
+  perspective: 200rem;
+  height: 30vh;
+  /*  margin: auto; */
+}
+
+.card-container:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.card-container:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: all 0.9s;
+  backface-visibility: hidden;
+}
+
+.card-back .card-body {
+  position: relative;
+}
+
 /*---Media Queries --*/
 @media (max-width: 992px) {
   .personal-image {
@@ -140,6 +182,20 @@ body {
   .information {
     text-align: center;
   }
+  .card-container {
+    margin: auto;
+  }
+}
+/* experience */
+#Experience {
+  min-height: 90vh;
+}
+/* projects */
+#Projects {
+  min-height: 90vh;
+}
+.center-img {
+  margin: 0 auto;
 }
 /*
 Extra small (xs) devices (portrait phones, less than 576px)
@@ -156,4 +212,13 @@ Large (lg) devices (desktops, 992px and up)
 
 Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
-*/ ;
+*/
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
