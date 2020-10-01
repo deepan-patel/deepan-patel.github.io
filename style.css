@@ -89,7 +89,7 @@ body {
 }
 
 #home-page .row {
-  min-height: 90vh;
+  height: 90vh;
 }
 
 .contacts-div {
@@ -120,7 +120,7 @@ body {
 }
 
 #About-me {
-  max-height: 90vh;
+  min-height: 90vh;
 }
 
 hr {
