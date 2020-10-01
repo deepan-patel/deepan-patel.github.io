@@ -54,6 +54,7 @@
       </div>
     </nav>
 
+
     <!-- home page -->
     <div class="container" id="home-page">
       <div class="row">
@@ -87,7 +88,7 @@
               <i class="fab fa-free-code-camp"></i>
             </a>
             <a href="mailto:deepan.patel1@ontariotechu.net" target="_blank"
-              ><i class="fa fa-envelope"></i
+              ><i class="fa fa-at"></i
             ></a>
           </div>
         </div>
@@ -238,7 +239,8 @@
                 ><a href="https://ontariotechu.ca/" target="_blank"
                   >Ontario Tech University</a
                 ></span
-              ><span class="time-location"
+              >
+              <span class="time-location"
                 >(Sept 2019 - Apr 2020) | Oshawa, On</span
               >
             </h1>
@@ -266,7 +268,8 @@
     <div class="container" id="Projects">
       <div class="sub-title"><h1>Projects</h1></div>
       <hr>
- 
+      <div col-sm-12> 
+
       <div id="slides" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
           <li data-target="#slides" data-slide-to="0" class="active"></li>
@@ -275,16 +278,67 @@
         </ul>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img  class="d-block w-100" src="files/crossyroad(large).gif">
+            <a href="#crossy-road"><img class="d-block w-100" src="files/crossyroad(large).gif"></a>
           </div>
           <div class="carousel-item">
-            <img  class="d-block w-100" src="files/missionEgpypt(large).gif">
+            <a href="#mission-egypt"><img  class="d-block w-100" src="files/missionEgpypt(large).gif"></a>
           </div>
           <div class="carousel-item">
-            <img  class="d-block w-100" src="files/physicsworld(large).gif">
+            <a href="#physics-world"><img  class="d-block w-100" src="files/physicsworld(large).gif"></a>
+          </div>
+        </div>
+      </div>
+      <!-- project cards -->
+      <div class ="row">
+        <div class=" col-sm-12 col-md-6 col-lg-4">
+          <div class="project-card" id="crossy-road">
+            <img class="img-fluid rounded-circle project-card-img"src="images/crossy-road.png">
+            <h1 id="project-name">Crossy Road</h1>
+            <div class="max-width-card">
+              <p id="project-info" class="">
+                An interactive user game was built using Python to teach young
+                programmers about basic game development developed using PyCharm.
+                The game grasp topics of object-oriented programming, user
+                interfaces, game design/animation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class=" col-sm-12 col-md-6 col-lg-4">
+          <div class="project-card" id="mission-egypt">
+            <img class="img-fluid rounded-circle project-card-img" src="images/mission_logo.png">
+            <h1 id="project-name">Mission Egypt</h1>
+            <div class="max-width-card">
+              <p id="project-info" class="">
+                An interactive user game was built using Python to teach young
+                programmers about basic game development developed using PyCharm.
+                The game grasp topics of object-oriented programming, user
+                interfaces, game design/animation.
+              </p>
+            </div>
           </div>
 
-        </div?>
+        </div>
+        
+
+        <div class=" col-sm-12 col-md-6 col-lg-4">
+          <div class="project-card" id="physics-world">
+            <img class="img-fluid rounded-circle project-card-img" src="images/physics_logo.png">
+            <h1 id="project-name">Physic's World</h1>
+            <div class="max-width-card">
+              <p id="project-info" class="">
+                A user interactive program which was developed using Python. The
+                application displays basic simple 2D collision and projectile
+                motion from user-input using a GUI interface. Developed to help
+                high school student visualize these physics concepts.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
       </div>
     </div>
 
